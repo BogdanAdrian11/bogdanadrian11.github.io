@@ -7,12 +7,18 @@ paginate: 10
 paginate_path: "/page:num/"
 
 # Site settings
-author: Bogdan Adrian
 title: My Personal Website
+# title-logo: /images/title-logo.jpeg
+author: Bogdan Adrian
 description: >- # this means to ignore newlines until "baseurl:"
   Welcome to my personal site. I will write blog posts about interesting technologies and showcase my personal projects.
+
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://bogdanadrian11.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+
+email: bogdanadrian102@gmail.com
 twitter_username: BogdanAdrian1
 github_username: BogdanAdrian11
 linkedin_username: bogdan-adrian-avram-b7526b143
+
+copyright: "BogdanAdrian"
