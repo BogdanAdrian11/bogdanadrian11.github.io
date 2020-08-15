@@ -10,6 +10,9 @@ layout: default
       <li>
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         <span class="post-meta">{{ post.date | date: date_format }}</span>
+        {%- if post.image -%} {%- assign postImage= post.image -%} {%- else -%} {%-
+          assign postImage="/assets/images/default.jpg"-%} {%- endif -%}
+          <img src="{{ postImage }}" alt="" class="blog-roll-image" />
         <h3>
           <a class="post-link" href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
