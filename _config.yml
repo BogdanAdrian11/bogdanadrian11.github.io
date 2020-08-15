@@ -7,8 +7,8 @@ paginate: 10
 paginate_path: "/page:num/"
 
 # Site settings
-title: My Personal Website
-# title-logo: /images/title-logo.jpeg
+title: Personal Website
+title-logo: /assets/images/title-logo.png
 author: Bogdan Adrian
 description: >- # this means to ignore newlines until "baseurl:"
   Welcome to my personal site. I will write blog posts about interesting technologies and showcase my personal projects.
