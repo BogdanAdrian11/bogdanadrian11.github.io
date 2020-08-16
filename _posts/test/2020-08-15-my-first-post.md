@@ -10,5 +10,6 @@ Welcome to my first post!
 
 ## Here are things I will be writing about
 
-1. This
-2. That
+1. Technology
+2. Personal Projects
+3. Programming Languages Features
