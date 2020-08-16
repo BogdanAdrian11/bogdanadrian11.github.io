@@ -1,6 +1,6 @@
 ---
-layout: page
+layout: projects
 title: Projects
-permalink: /projects/
+redirect: https://github.com/BogdanAdrian11?tab=repositories
 order: 2
 ---
