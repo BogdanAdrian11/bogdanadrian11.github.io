@@ -2,52 +2,58 @@
 layout: default
 ---
 
-<article
-  class="post h-entry"
-  itemscope
-  itemtype="http://schema.org/BlogPosting"
->
-  <header class="post-header">
-    {%- if page.image -%} {%- assign postImage= page.image -%} {%- else -%} {%-
-    assign postImage="/assets/images/default.jpg"-%} {%- endif -%}
-    <img src="{{ postImage }}" alt="" class="feature-image-post" />
-    <h1 class="post-title p-name" itemprop="name headline">
-      {{ page.title | escape }}
-    </h1>
-    <p class="post-meta">
-      <time
-        class="dt-published"
-        datetime="{{ page.date | date_to_xmlschema }}"
-        itemprop="datePublished"
-      >
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y"
-        -%} {{ page.date | date: date_format }}
-      </time>
-      {%- if page.author -%} •
-      <span itemprop="author" itemscope itemtype="http://schema.org/Person"
-        ><span class="p-author h-card" itemprop="name"
-          >{{ page.author }}</span
-        ></span
-      >
-      {%- endif -%}
-    </p>
-  </header>
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+    <header class="post-header">
+        {%- if page.image -%}
+            {%- assign postImage= page.image -%}
+        {%- else -%}
+            {%-
+    assign postImage="/assets/images/default.jpg"-%}
+        {%- endif -%}
+        <img src="{{ postImage }}" alt="" class="feature-image-post"/>
+        <h1 class="post-title p-name" itemprop="name headline">
+            {{ page.title | escape }}
+        </h1>
+        <p class="post-meta">
+            <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y"
+        -%}
+                {{ page.date | date: date_format }}
+            </time>
+            {%- if page.author -%}
+                •
+                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                    <span class="p-author h-card" itemprop="name">{{ page.author }}</span>
+                </span>
+            {%- endif -%}
+        </p>
+    </header>
 
-  <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
-  </div>
+    <div class="post-content e-content" itemprop="articleBody">
+        {{ content }}
+    </div>
 
-  <script
-    src="https://utteranc.es/client.js"
-    repo="BogdanAdrian11/bogdanadrian11.github.io"
-    issue-term="pathname"
-    theme="github-light"
-    crossorigin="anonymous"
-    async
-  ></script>
+    <div class="share_buttons" style="vertical-align: top; line-height: 10px;">
+        <script async src="/scripts/twitter.js"></script>
+        <span class="twitter">
+            <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text={{page.title}}, by @{{site.twitter_username}}">Tweet</a>
+        </span>
 
-  {%- if site.disqus.shortname -%} {%- include disqus_comments.html -%} {%-
+        <span class="linkedin">
+            <script src="https://platform.linkedin.com/in.js" type="text/javascript">
+                lang : en_US
+            </script>
+            <script type="IN/Share" data-url="{{page.url}}" data-counter="right"></script>
+        </span>
+    </div>
+
+    <script async crossorigin="anonymous" issue-term="pathname" repo="BogdanAdrian11/bogdanadrian11.github.io" src="https://utteranc.es/client.js" theme="github-light"></script>
+
+    {%- if site.disqus.shortname -%}
+        {%- include disqus_comments.html -%}
+    {%-
   endif -%}
 
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+    <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+
 </article>
