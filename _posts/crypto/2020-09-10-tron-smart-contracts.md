@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Tron - How to talk to a smart contract"
-preview: "Yield farming website is down? Panic is activating? Check this quick and simple guide..."
+preview: "Yield farming website is down? Panic is activating? Check this quick and simple guide"
 image: /assets/images/unsplashed/farming.jpg
 date: 2020-09-10 15:50:31 +0300
 categories: crypto
