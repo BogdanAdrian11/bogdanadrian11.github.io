@@ -8,11 +8,14 @@ categories: crypto
 ---
 # Yield farming website is down? Panic is activating? Check this quick and simple guide to bypass the website and interact directly with Tron smart contracts.
 
-1. Go to the [tronscan](https://tronscan.org/) website.
+1. Go to the [tronscan](https://tronscan.org/){:target="_blank"} website.
 2. Find the smart contract you want to interact with. Best way is to search for your earlier transaction when you interacted with it.
 3. On tronscan's smart contract address go to the contract tab. Here you will have 3 subtabs (Code, Read Contract and Write Contract).
+  - `Code` tab is where you can see the contract's source code if it's open sourced. Green mark with **Contract source code is verified (Perfect match)**  means that the attached source code matches the contract's deployed byte code
+  - `Read Contract` shows read-only functions
+  - `Write Contract` shows functions that change the state
 4. Check the `Contract codes` solidity code. This step is to validate that the function you want to  call (e.g. `exit()`) does want you want it to do. On Tron, the contract can be closed source, meaning that you cannot see the source code files. If you interact with a smart contract without open source code you put all your trust into the person behind it. I recommend to not use any contract that isn't open source.
-  - a yield farming `exit()` function example from [dragonfi](https://tronscan.org/#/contract/TWJGyUGgYb283CWchS4o8iBnH8xWSdFH81/code)
+  - a yield farming `exit()` function example from [dragonfi](https://tronscan.org/#/contract/TWJGyUGgYb283CWchS4o8iBnH8xWSdFH81/code){:target="_blank"}
   ```javascript
     function exit() external {
         withdraw(balanceOf(msg.sender));
