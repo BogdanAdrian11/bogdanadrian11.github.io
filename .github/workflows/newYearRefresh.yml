@@ -1,0 +1,18 @@
+name: New Year Refresh
+
+on:
+  schedule:
+    - cron:  '0 12 1 1 *' # Runs every year on first day of January at 12:00
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger GitHub Pages rebuild
+        run: |
+          curl --fail --request POST \
+            --url https://api.github.com/repos/${{ github.repository }}/pages/builds \
+            --header "Authorization: Bearer $USER_TOKEN"
+        env:
+          USER_TOKEN: ${{ secrets.USER_TOKEN }}
